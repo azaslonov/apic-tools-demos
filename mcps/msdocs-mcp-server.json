@@ -1,0 +1,44 @@
+{
+  "server": {
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "msdocs-mcp-server",
+    "title": "Microsoft Learn MCP server",
+    "description": "The Microsoft Learn MCP server is a remote Model Context Protocol (MCP) server that enables Copilots and AI agents to securely access trusted, up-to-date knowledge from Microsoft’s official documentation via streamable HTTP—allowing them to search content, retrieve complete articles, and surface relevant code samples to deliver accurate, grounded responses.",
+    "version": "Original",
+    "icons": [
+      {
+        "src": "https://avatars.githubusercontent.com/microsoft?s=64"
+      }
+    ],
+    "remotes": [
+      {
+        "type": "sse",
+        "url": "https://learn.microsoft.com/api/mcp"
+      }
+    ]
+  },
+  "_meta": {
+    "io.modelcontextprotocol.registry/official": {
+      "status": "active",
+      "createdAt": "2025-07-12T00:36:08.6401638+00:00",
+      "updatedAt": "2026-04-02T06:40:15.6549893+00:00",
+      "isLatest": true
+    },
+    "x-ms-support-info": {
+      "name": "customer support contact",
+      "url": "https://github.com/microsoftdocs/mcp"
+    },
+    "x-ms-preview": false,
+    "x-ms-id": "60dc6749-5610-43c7-a764-fbd8a2024e31",
+    "x-ms-license": {
+      "name": "Microsoft Learn Docs",
+      "url": "https://learn.microsoft.com/en-us/training/support/mcp"
+    },
+    "x-ms-use-cases": [
+      {
+        "name": "Search Functionality",
+        "description": "Search and fetch official Microsoft documentation and code samples."
+      }
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "server": {
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "github-mcp-server",
+    "title": "GitHub",
+    "description": "Access GitHub repositories, issues, and pull requests through secure API integration. If you need the GitHub MCP server to access your private repo, make sure you have installed the GitHub app: https://github.com/apps/microsoft-foundry-agent-service",
+    "repository": {
+      "url": "https://github.com/github/github-mcp-server",
+      "source": "github"
+    },
+    "version": "Original",
+    "icons": [
+      {
+        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqj9Ii13d6hx5a9kyLnC5A8A96LDSaSZv_w&s"
+      }
+    ],
+    "remotes": [
+      {
+        "type": "sse",
+        "url": "https://api.githubcopilot.com/mcp"
+      }
+    ]
+  },
+  "_meta": {
+    "io.modelcontextprotocol.registry/official": {
+      "status": "active",
+      "createdAt": "2025-07-12T00:36:08.6609206+00:00",
+      "updatedAt": "2026-04-28T06:00:31.6209892+00:00",
+      "isLatest": true
+    },
+    "x-ms-connector-name": "foundrygithubmcp",
+    "x-ms-support-info": {
+      "name": "customer support contact",
+      "url": "https://github.com/github/github-mcp-server/blob/main/SUPPORT.md"
+    },
+    "x-ms-preview": false,
+    "x-ms-id": "11d39ec0-4691-48ed-ac1e-a9e5d94abf28",
+    "x-ms-security-schemes": {
+      "githuboauth": {
+        "type": "oauth2",
+        "description": "Authenticate with GitHub using OAuth2 authorization code flow with PKCE support.",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://github.com/login/oauth/authorize",
+            "tokenUrl": "https://github.com/login/oauth/access_token",
+            "refreshUrl": "https://github.com/login/oauth/access_token",
+            "scopes": {
+              "repo": "Access to repo resources",
+              "read:user": "Access to read:user resources"
+            }
+          }
+        }
+      },
+      "githubbearerauth": {
+        "type": "http",
+        "description": "Authenticate with GitHub using a Personal Access Token.",
+        "scheme": "bearer",
+        "bearerFormat": "Personal Access Token"
+      }
+    },
+    "x-ms-tags": [
+      "Repo management",
+      "Code analysis",
+      "Issues"
+    ],
+    "x-ms-license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "x-ms-use-cases": [
+      {
+        "name": "Repository Management",
+        "description": "Browse, query, and analyze repositories, commits, files, and project structure."
+      },
+      {
+        "name": "File Operations",
+        "description": "Create, update, retrieve, and commit files in repositories."
+      },
+      {
+        "name": "Issues Handling",
+        "description": "Create, update, list, comment on, and filter issues in repositories."
+      },
+      {
+        "name": "Pull Request Management",
+        "description": "Create, merge, and review pull requests, including managing statuses and comments."
+      },
+      {
+        "name": "Search Functionality",
+        "description": "Search for code, issues, pull requests, and users with advanced filtering options."
+      },
+      {
+        "name": "CI/CD & Workflow Intelligence",
+        "description": "Monitor workflow runs in GitHub Actions, analyze build failures, and manage releases."
+      },
+      {
+        "name": "Code Analysis",
+        "description": "Examine security findings, review dependabot alerts, analyze code patterns, and get codebase insights."
+      }
+    ]
+  }
+}
