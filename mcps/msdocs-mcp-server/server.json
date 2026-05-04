@@ -1,5 +1,4 @@
 {
-  "server": {
     "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
     "name": "msdocs-mcp-server",
     "title": "Microsoft Learn MCP server",
@@ -40,5 +39,4 @@
         "description": "Search and fetch official Microsoft documentation and code samples."
       }
     ]
-  }
 }
