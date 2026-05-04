@@ -1,5 +1,4 @@
-{
-  "server": {
+{  
     "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
     "name": "github-mcp-server",
     "title": "GitHub",
@@ -97,5 +96,4 @@
         "description": "Examine security findings, review dependabot alerts, analyze code patterns, and get codebase insights."
       }
     ]
-  }
 }
